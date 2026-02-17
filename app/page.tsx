@@ -1,6 +1,17 @@
+import EventCard from "@/components/EventCard"
 import ExploreBtn from "@/components/ExploreBtn"
 
 const page = () => {
+
+  const events = [
+    {
+      image: '/images/event1.png',title:'event1'
+    },
+    {
+      image: '/images/event2.png',title:'event2'
+    }
+  ]
+
   return (
     <section>
       <h1 className="text-center">The Hub For Every Dev!! <br /> Event You Can&apos;t Miss </h1>
@@ -9,9 +20,11 @@ const page = () => {
 
       <div className="mt-2 space-y-7">
     <h3 className="">Featured Events</h3>
-    <ul className="event">
-      {[1,2,3,4,5].map((event)=>(
-        <li key={event}>Event {event}</li>
+    <ul className="events">
+      {events.map(({image,title})=>(
+        <li key={title}>
+          <EventCard image={image} title={title}/>
+        </li>
       ))}
     </ul>
       </div>
