@@ -1,6 +1,9 @@
 const page = () => {
   return (
-    <div>page</div>
+    <section>
+      <h1 className="text-center">The Hub For Every Dev!! <br /> Event You Can't Miss </h1>
+      <p className="text-center mt-5">Hackathon Meetups , and conferences All in one place</p>
+      </section>
   )
 }
 
