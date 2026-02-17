@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LightRays from "@/components/LightRays";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,24 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      
+
+<div style={{ width: '100%', height: '600px', position: 'relative' }}>
+  <LightRays
+    raysOrigin="top-center-offset"
+    raysColor="#5dfeca"
+    raysSpeed={0.5}
+    lightSpread={0.9}
+    rayLength={1.4}
+    followMouse={true}
+    mouseInfluence={0.02}
+    noiseAmount={0}
+    distortion={0.01}
+    pulsating={false}
+    fadeDistance={1}
+    saturation={1}
+/>
+</div>
         {children}
       </body>
     </html>
