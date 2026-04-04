@@ -1,21 +1,9 @@
 import EventCard from "@/components/EventCard"
 import ExploreBtn from "@/components/ExploreBtn"
+import { events } from "@/lib/constants"
 
 const page = () => {
 
-  const events = [
-    {
-      image: '/images/event1.png',
-      title:'event1',
-      slug:'event-1',
-      location : 'location-1',
-      date : 'da',
-      time : '',
-    },
-    {
-      image: '/images/event2.png',title:'event2'
-    }
-  ]
 
   return (
     <section>
@@ -26,9 +14,9 @@ const page = () => {
       <div className="mt-2 space-y-7">
     <h3 className="">Featured Events</h3>
     <ul className="events">
-      {events.map(({image,title})=>(
-        <li key={title}>
-          <EventCard image={image} title={title}/>
+      {events.map((event)=>(
+        <li key={event.title} className="list-none">
+          <EventCard {...event}/>
         </li>
       ))}
     </ul>
