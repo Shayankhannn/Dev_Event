@@ -5,7 +5,12 @@ const page = () => {
 
   const events = [
     {
-      image: '/images/event1.png',title:'event1'
+      image: '/images/event1.png',
+      title:'event1',
+      slug:'event-1',
+      location : 'location-1',
+      date : 'da',
+      time : '',
     },
     {
       image: '/images/event2.png',title:'event2'
