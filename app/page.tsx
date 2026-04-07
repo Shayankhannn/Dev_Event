@@ -9,7 +9,7 @@ const page = () => {
     <section>
       <h1 className="text-center">The Hub For Every Dev!! <br /> Event You Can&apos;t Miss </h1>
       <p className="text-center mt-5">Hackathon Meetups , and conferences All in one place</p>
-      {/* <ExploreBtn/> */}
+      <ExploreBtn/>
 
       <div className="mt-2 space-y-7">
     <h3 className="">Featured Events</h3>
