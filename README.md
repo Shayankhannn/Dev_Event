@@ -1,3 +1,3 @@
 dev event
 
-currently at card adding content 
+currently at card adding content -- done
