@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LightRays from "@/components/LightRays";
 import Navbar from "@/components/Navbar";
+import { PostHogProvider } from "@/components/PostHogProvider";
+import { PostHogPageview } from "@/components/PostHogPageview";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +32,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      
+        <PostHogProvider>
+          <Suspense fallback={null}>
+            <PostHogPageview />
+          </Suspense>
 <Navbar/>
 <div className="absolute inset-0 top-0 z-[-1] min-h-screen ">
   <LightRays
@@ -47,9 +53,10 @@ export default function RootLayout({
     saturation={1}
 />
 </div>
-        <main>
-          {children}
-        </main>
+          <main>
+            {children}
+          </main>
+        </PostHogProvider>
       </body>
     </html>
   );
